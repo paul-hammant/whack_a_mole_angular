@@ -1,1 +1,24 @@
-My GitHub Page
+<html xmlns:ng="http://angularjs.org">
+<head>
+<script src="http://code.angularjs.org/0.10.5/angular-0.10.5.min.js" ng:autobind></script>
+<title>Whack-a-mole Angular Edition</title>
+</head>
+<body ng:controller="WamCtrl">
+<table bgcolor="green">
+  <tr ng:repeat="moleRow in moleTable">
+    <td ng:repeat="mole in moleRow.moles">
+      <img src="mole-true.png" ng:show="mole.up" ng:click="mole.up = false">
+      <img src="mole-false.png" ng:hide="mole.up" ng:click="mole.up = true">
+    </td>	
+  </tr>
+</table>
+</body>
+<script>
+  function WamCtrl() {
+    this.moleTable = [
+      { moles : [ { up: true }, { up: false } ] },
+      { moles : [ { up: false }, { up: true } ] },
+    ];
+  }
+</script>
+</html>
