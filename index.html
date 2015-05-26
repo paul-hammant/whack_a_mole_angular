@@ -1,24 +1,25 @@
-<html xmlns:ng="http://angularjs.org">
+<html ng-app="WAM">
 <head>
-<script src="http://code.angularjs.org/0.10.5/angular-0.10.5.min.js" ng:autobind></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
 <title>Whack-a-mole Angular Edition</title>
 </head>
-<body ng:controller="WamCtrl">
+<body ng-controller="WamCtrl">
 <table bgcolor="green">
-  <tr ng:repeat="moleRow in moleTable">
-    <td ng:repeat="mole in moleRow.moles">
-      <img src="mole-true.png" ng:show="mole.up" ng:click="mole.up = false">
-      <img src="mole-false.png" ng:hide="mole.up" ng:click="mole.up = true">
+  <tr ng-repeat="moleRow in moleTable">
+    <td ng-repeat="mole in moleRow.moles">
+      <img src="mole-true.png" ng-show="mole.up" ng-click="mole.up = false">
+      <img src="mole-false.png" ng-hide="mole.up" ng-click="mole.up = true">
     </td>	
   </tr>
 </table>
 </body>
-<script>
-  function WamCtrl() {
-    this.moleTable = [
-      { moles : [ { up: true }, { up: false } ] },
-      { moles : [ { up: false }, { up: true } ] },
-    ];
-  }
+<script type="text/javascript">
+    var myApp = angular.module('WAM', []);  
+    myApp.controller('WamCtrl', ['$scope', function($scope) {
+        $scope.moleTable = [
+            { moles : [ { up: true }, { up: false } ] },
+            { moles : [ { up: false }, { up: true } ] },
+        ];
+    }]);
 </script>
 </html>
