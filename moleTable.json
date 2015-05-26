@@ -1,0 +1,23 @@
+
+[
+  {
+    "moles": [
+      {
+        "up": true
+      },
+      {
+        "up": false
+      }
+    ]
+  },
+  {
+    "moles": [
+      {
+        "up": false
+      },
+      {
+        "up": true
+      }
+    ]
+  }
+]

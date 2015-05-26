@@ -1,7 +1,9 @@
+<!DOCTYPE html>
 <html ng-app="WAM">
 <head>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
-<title>Whack-a-mole Angular Edition</title>
+  <script type="text/javascript" 
+      src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+  <title>Whack-a-mole Angular Edition</title>
 </head>
 <body ng-controller="WamCtrl">
 <table bgcolor="green">
@@ -19,11 +21,10 @@
 </body>
 <script type="text/javascript">
     var myApp = angular.module('WAM', []);  
-    myApp.controller('WamCtrl', ['$scope', function($scope) {
-        $scope.moleTable = [
-            { moles : [ { up: true }, { up: false } ] },
-            { moles : [ { up: false }, { up: true } ] },
-        ];
+    myApp.controller('WamCtrl', ['$scope', '$http', function($scope, $http) {
+        $http.get('moleTable.json').success(function(data){
+          $scope.moleTable = data;
+        });
     }]);
 </script>
 </html>
