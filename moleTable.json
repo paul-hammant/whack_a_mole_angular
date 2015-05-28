@@ -10,12 +10,12 @@
     ]
   },
   {
-    "moles": [
+    "moles":
       {
         "up": false
       },
       {
-        "up": true
+        "up": true 
       }
     ]
   }
