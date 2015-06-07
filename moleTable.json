@@ -2,17 +2,17 @@
   {
     "moles": [
       {
-        "up": false
+        "up": true
       },
       {
-        "up": true
+        "up": false
       }
     ]
   },
   {
     "moles": [
       {
-        "up": true
+        "up": false
       },
       {
         "up": false
