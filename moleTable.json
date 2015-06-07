@@ -1,21 +1,21 @@
 [
   {
-    "moles": [ 
+    "moles": [
       {
         "up": true
       },
       {
-        "up": false
+        "up": true
       }
     ]
   },
   {
     "moles": [
       {
-        "up": false
+        "up": true
       },
       {
-        "up": true 
+        "up": true
       }
     ]
   }
