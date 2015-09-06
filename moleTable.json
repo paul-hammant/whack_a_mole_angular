@@ -1,6 +1,6 @@
 [
   {
-    "moles": [ 
+    "moles": [
       {
         "up": true
       },
@@ -15,7 +15,7 @@
         "up": false
       },
       {
-        "up": true 
+        "up": false
       }
     ]
   }
